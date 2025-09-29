@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        int n = sc.nextInt();
+        sc.nextLine();
+
+        String bestName = "";
+        int bestTasks = -1;
+
+        for (int i = 0; i < n; i++) {
+          
+            String name = sc.next();
+          
+            int tasks = sc.nextInt();
+
+            if (tasks > bestTasks) {
+                bestTasks = tasks;
+                bestName = name;
+            }
+        }
+
+        System.out.println("Самый продуктивный сотрудник: " + bestName + " " + bestTasks + "его количество задач);
+    }
+}
